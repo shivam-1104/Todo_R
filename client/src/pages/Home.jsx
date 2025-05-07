@@ -39,12 +39,7 @@ const Home = () => {
         <TodoList todos={todos} onDelete={handleDelete} onUpdate={handleUpdate} />
         <div className="flex justify-between items-center mt-4">
           <p>You have {todos.length} pending tasks</p>
-          {/* <button
-            onClick={handleClear}
-            className="bg-purple-500 text-white px-4 py-1 rounded"
-          >
-            Clear All
-          </button> */}
+          
         </div>
       </div>
     </div>
