@@ -37,10 +37,12 @@ const Home = () => {
         <h1 className="text-2xl font-bold mb-4">Todo App</h1>
         <TodoForm onAdd={handleAdd} />
         <TodoList todos={todos} onDelete={handleDelete} onUpdate={handleUpdate} />
-        <div className="flex justify-between items-center mt-4">
-          <p>You have {todos.length} pending tasks</p>
-          
-        </div>
+        <div className="flex justify-between items-center mt-4 text-sm text-gray-600">
+  <p>
+    You have {todos.filter(t => !t.completed).length} pending &{" "}
+    {todos.filter(t => t.completed).length} completed tasks
+  </p>
+</div>
       </div>
     </div>
   );
